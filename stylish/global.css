@@ -19,9 +19,6 @@ body {
 	font-family: Arial
 }
 
-h1 {
-}
-
 .buttondiv {
 	display: flex;
 	flex-direction: column;
