@@ -10,7 +10,7 @@ func main() {
 	http.Handle("/", fs)
 
 	fmt.Println("Server running on :5098...")
-	err := http.ListenAndServe(":5098", nil)
+	err := http.ListenAndServeTLS(":5098", "/etc/letsencrypt/live/el7ossen.uk/fullchain.pem", "/etc/letsencrypt/live/el7ossen.uk/privkey.pem", nil)
 	if err != nil {
 		fmt.Println("Error:", err)
 	}
